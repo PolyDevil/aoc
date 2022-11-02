@@ -1,0 +1,13 @@
+{
+  "name": "aoc",
+  "version": "0.0.1",
+  "scripts": {
+    "res:build": "rescript",
+    "res:clean": "rescript clean",
+    "res:start": "rescript build -w",
+    "dev": "rescript build -w"
+  },
+  "dependencies": {
+    "rescript": "^10.0.1"
+  }
+}
