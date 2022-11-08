@@ -2,16 +2,16 @@
 
 import * as ReScriptHash from "rescript-hash/src/ReScriptHash.mjs";
 
-function make(s) {
+function hack(substring, limit, s) {
   var i = 0;
   var v;
   var $$break = false;
   while(!$$break) {
-    if (i === 10000000) {
+    if (i === limit) {
       $$break = true;
     } else {
       var hash = ReScriptHash.MD5.makeU(s + String(i));
-      if (hash.startsWith("00000")) {
+      if (hash.startsWith(substring)) {
         v = i;
         $$break = true;
       } else {
@@ -22,19 +22,21 @@ function make(s) {
   return v;
 }
 
+function make(s) {
+  return hack("00000", 10000000, s);
+}
+
 var $$String$1;
 
 var Int;
 
 var MD5;
 
-var limit = 10000000;
-
 export {
   $$String$1 as $$String,
   Int ,
   MD5 ,
-  limit ,
+  hack ,
   make ,
 }
 /* No side effect */

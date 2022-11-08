@@ -2,9 +2,7 @@ module String = Js.String2
 module Int = Belt.Int
 module MD5 = ReScriptHash.MD5
 
-let limit = 10000000
-
-let make = s => {
+let hack = (~substring, ~limit, s) => {
   let i = ref(0)
   let v = ref(None)
   let break = ref(false)
@@ -14,7 +12,7 @@ let make = s => {
     | true => break := true
     | false => {
         let hash = MD5.makeU(. s ++ i.contents->Int.toString)
-        switch hash->String.startsWith("00000") {
+        switch hash->String.startsWith(substring) {
         | true => {
             v.contents = Some(i.contents)
             break := true
@@ -28,3 +26,5 @@ let make = s => {
 
   v.contents
 }
+
+let make = s => hack(~substring="00000", ~limit=10000000, s)
