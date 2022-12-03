@@ -18,6 +18,9 @@ function getPriority(s) {
       if (match === match$1 || Belt_MutableSetInt.has(s0, match$1)) {
         r = match$1;
         $$break = true;
+      } else if (Belt_MutableSetInt.has(s1, match)) {
+        r = match;
+        $$break = true;
       } else {
         Belt_MutableSetInt.add(s0, match);
         Belt_MutableSetInt.add(s1, match$1);
