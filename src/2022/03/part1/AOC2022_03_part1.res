@@ -1,14 +1,7 @@
 module String = Js.String2
 module Array = Js.Array2
 module Set = Belt.MutableSet.Int
-
-module CodePoint = {
-  let make = n =>
-    switch n >= 97 {
-    | true => n - 96
-    | false => n - 38
-    }
-}
+module CodePoint = AOC2022_03.CodePoint
 
 let getPriority = s => {
   let i = ref(0)
