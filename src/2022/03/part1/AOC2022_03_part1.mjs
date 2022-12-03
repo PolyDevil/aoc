@@ -35,14 +35,7 @@ function getPriority(s) {
     }
   };
   var r$1 = r;
-  var tmp;
-  if (r$1 !== undefined) {
-    tmp = r$1;
-  } else {
-    var match$2 = Belt_MutableSetInt.toArray(Belt_MutableSetInt.intersect(s0, s1));
-    tmp = match$2.length !== 1 ? Pervasives.failwith("no intersection") : match$2[0];
-  }
-  return AOC2022_03.CodePoint.make(tmp);
+  return AOC2022_03.CodePoint.make(r$1 !== undefined ? r$1 : Pervasives.failwith("no intersection"));
 }
 
 function make(a) {

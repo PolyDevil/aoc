@@ -43,11 +43,7 @@ let getPriority = s => {
 
   switch r.contents {
   | Some(r) => r
-  | None =>
-    switch Set.intersect(s0, s1)->Set.toArray {
-    | [r] => r
-    | _ => failwith("no intersection")
-    }
+  | None => failwith("no intersection")
   }->CodePoint.make
 }
 
