@@ -1,7 +1,6 @@
 module String = Js.String2
 module Array = Js.Array2
 module Set = Belt.MutableSet.Int
-module Map = Belt.MutableMap.Int
 module CodePoint = AOC2022_03_part1.CodePoint
 
 let toSet = s => s->Js.String.castToArrayLike->Array.from->Array.reduce((p, c) =>

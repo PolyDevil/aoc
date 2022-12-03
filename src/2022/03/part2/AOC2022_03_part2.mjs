@@ -32,15 +32,12 @@ var $$Array;
 
 var $$Set;
 
-var $$Map;
-
 var CodePoint;
 
 export {
   $$String ,
   $$Array ,
   $$Set ,
-  $$Map ,
   CodePoint ,
   toSet ,
   getPriority ,

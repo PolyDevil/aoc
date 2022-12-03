@@ -1,7 +1,6 @@
 module String = Js.String2
 module Array = Js.Array2
 module Set = Belt.MutableSet.Int
-module Map = Belt.MutableMap.Int
 
 module CodePoint = {
   let make = n =>

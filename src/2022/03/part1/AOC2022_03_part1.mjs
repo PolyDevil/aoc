@@ -65,13 +65,10 @@ var $$Array;
 
 var $$Set;
 
-var $$Map;
-
 export {
   $$String ,
   $$Array ,
   $$Set ,
-  $$Map ,
   CodePoint ,
   getPriority ,
   make$1 as make,
