@@ -8,7 +8,8 @@ function toSet(s) {
   return Belt_MutableSetInt.fromArray(Array.from(s).reduce((function (p, c) {
                     var n = c.codePointAt(0);
                     if (n !== undefined) {
-                      return p.concat([n]);
+                      p.push(n);
+                      return p;
                     } else {
                       return p;
                     }
