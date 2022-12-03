@@ -26,15 +26,12 @@ let getPriority = s => {
       } else if s1->Set.has(c0) {
         r := c0->Some
         break := true
+      } else if i.contents + 1 === mid {
+        break := true
       } else {
         s0->Set.add(c0)
         s1->Set.add(c1)
-
-        if i.contents + 1 === mid {
-          break := true
-        } else {
-          i := i.contents + 1
-        }
+        i := i.contents + 1
       }
 
     | _ => break := true

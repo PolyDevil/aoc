@@ -21,14 +21,12 @@ function getPriority(s) {
       } else if (Belt_MutableSetInt.has(s1, match)) {
         r = match;
         $$break = true;
+      } else if ((i + 1 | 0) === mid) {
+        $$break = true;
       } else {
         Belt_MutableSetInt.add(s0, match);
         Belt_MutableSetInt.add(s1, match$1);
-        if ((i + 1 | 0) === mid) {
-          $$break = true;
-        } else {
-          i = i + 1 | 0;
-        }
+        i = i + 1 | 0;
       }
     } else {
       $$break = true;
