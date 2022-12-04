@@ -15,16 +15,14 @@ function hasIntersection(param, param$1) {
 }
 
 function make(a) {
-  return a.reduce((function (p, param) {
-                if (hasIntersection(param[0], param[1])) {
-                  return p + 1 | 0;
-                } else {
-                  return p;
-                }
-              }), 0);
+  return a.reduce(function (p, param) {
+    if (hasIntersection(param[0], param[1])) {
+      return (p + 1) | 0;
+    } else {
+      return p;
+    }
+  }, 0);
 }
 
-export {
-  make ,
-}
+export { make };
 /* No side effect */
